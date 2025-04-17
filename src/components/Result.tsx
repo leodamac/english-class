@@ -26,6 +26,7 @@ const Result: React.FC<Props> = ({ questions, answers, onReset }) => {
       {incorrectQuestions.length > 0 ? (
         <ul>
           {incorrectQuestions.map((q, idx) => {
+            idx
             const index = questions.indexOf(q);
             return (
               <li key={index}>
