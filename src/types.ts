@@ -47,4 +47,4 @@ export type Question =
   | AudioQuestionType
   | ReadingQuestionType;
 
-export type AnswerMap = Record<number, string>;
+  export type AnswerMap = Record<string, string>;
