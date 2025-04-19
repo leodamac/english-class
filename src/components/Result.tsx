@@ -1,4 +1,3 @@
-// src/components/Result.tsx
 import React from "react";
 import { Question, AnswerMap } from "../types";
 
@@ -9,24 +8,43 @@ type Props = {
 };
 
 const Result: React.FC<Props> = ({ questions, answers, onReset }) => {
-  const score = questions.reduce((sum, q, i) => {
-    if (q.type === "reading") {
-      // Si la pregunta es de lectura, verificar las sub-preguntas
-      const subQuestionIndex = Math.floor(i / q.questions.length);
-      const subQuestion = q.questions[subQuestionIndex];
-      return answers[i] === subQuestion.answer ? sum + 1 : sum;
-    } else {
-      return answers[i] === q.answer ? sum + 1 : sum;
-    }
-  }, 0);
+  let totalQuestions = 0;
+  let correctAnswers = 0;
 
-  const incorrectQuestions = questions.filter((q, i) => {
+  const incorrectEntries: {
+    prompt: string;
+    userAnswer: string;
+    correctAnswer: string;
+  }[] = [];
+
+  questions.forEach((q, qIndex) => {
     if (q.type === "reading") {
-      const subQuestionIndex = Math.floor(i / q.questions.length);
-      const subQuestion = q.questions[subQuestionIndex];
-      return answers[i] !== subQuestion.answer;
+      q.questions.forEach((subQ, subIndex) => {
+        totalQuestions++;
+        const key = `${qIndex}-${subIndex}`;
+        const userAnswer = answers[key];
+        if (userAnswer === subQ.answer) {
+          correctAnswers++;
+        } else {
+          incorrectEntries.push({
+            prompt: subQ.prompt,
+            userAnswer: userAnswer || "No answer",
+            correctAnswer: subQ.answer,
+          });
+        }
+      });
     } else {
-      return answers[i] !== q.answer;
+      totalQuestions++;
+      const userAnswer = answers[qIndex];
+      if (userAnswer === q.answer) {
+        correctAnswers++;
+      } else {
+        incorrectEntries.push({
+          prompt: q.prompt,
+          userAnswer: userAnswer || "No answer",
+          correctAnswer: q.answer,
+        });
+      }
     }
   });
 
@@ -34,46 +52,25 @@ const Result: React.FC<Props> = ({ questions, answers, onReset }) => {
     <section className="result">
       <h2>Your Score</h2>
       <p>
-        {score} / {questions.length}
+        {correctAnswers} / {totalQuestions}
       </p>
 
       <h3>Review Incorrect Answers</h3>
-      {incorrectQuestions.length > 0 ? (
+      {incorrectEntries.length > 0 ? (
         <ul>
-          {incorrectQuestions.map((q, idx) => {
-            const index = questions.indexOf(q);
-            if (q.type === "reading") {
-              const subQuestionIndex = Math.floor(idx / q.questions.length);
-              const subQuestion = q.questions[subQuestionIndex];
-              return (
-                <li key={index}>
-                  <p className="question">
-                    <strong>Q:</strong> {subQuestion.prompt}
-                  </p>
-                  <p className="user-answer">
-                    <strong>Your answer:</strong> {answers[index] || "No answer"}
-                  </p>
-                  <p className="correct-answer">
-                    <strong>Correct answer:</strong> {subQuestion.answer}
-                  </p>
-                </li>
-              );
-            } else {
-              return (
-                <li key={index}>
-                  <p className="question">
-                    <strong>Q:</strong> {q.prompt}
-                  </p>
-                  <p className="user-answer">
-                    <strong>Your answer:</strong> {answers[index] || "No answer"}
-                  </p>
-                  <p className="correct-answer">
-                    <strong>Correct answer:</strong> {q.answer}
-                  </p>
-                </li>
-              );
-            }
-          })}
+          {incorrectEntries.map((entry, idx) => (
+            <li key={idx}>
+              <p className="question">
+                <strong>Q:</strong> {entry.prompt}
+              </p>
+              <p className="user-answer">
+                <strong>Your answer:</strong> {entry.userAnswer}
+              </p>
+              <p className="correct-answer">
+                <strong>Correct answer:</strong> {entry.correctAnswer}
+              </p>
+            </li>
+          ))}
         </ul>
       ) : (
         <p>Perfect! All answers were correct.</p>
