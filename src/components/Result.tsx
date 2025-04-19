@@ -1,3 +1,4 @@
+// src/components/Result.tsx
 import React from "react";
 import { Question, AnswerMap } from "../types";
 
@@ -8,12 +9,26 @@ type Props = {
 };
 
 const Result: React.FC<Props> = ({ questions, answers, onReset }) => {
-  const score = questions.reduce(
-    (sum, q, i) => (answers[i] === q.answer ? sum + 1 : sum),
-    0
-  );
+  const score = questions.reduce((sum, q, i) => {
+    if (q.type === "reading") {
+      // Si la pregunta es de lectura, verificar las sub-preguntas
+      const subQuestionIndex = Math.floor(i / q.questions.length);
+      const subQuestion = q.questions[subQuestionIndex];
+      return answers[i] === subQuestion.answer ? sum + 1 : sum;
+    } else {
+      return answers[i] === q.answer ? sum + 1 : sum;
+    }
+  }, 0);
 
-  const incorrectQuestions = questions.filter((q, i) => answers[i] !== q.answer);
+  const incorrectQuestions = questions.filter((q, i) => {
+    if (q.type === "reading") {
+      const subQuestionIndex = Math.floor(i / q.questions.length);
+      const subQuestion = q.questions[subQuestionIndex];
+      return answers[i] !== subQuestion.answer;
+    } else {
+      return answers[i] !== q.answer;
+    }
+  });
 
   return (
     <section className="result">
@@ -26,21 +41,38 @@ const Result: React.FC<Props> = ({ questions, answers, onReset }) => {
       {incorrectQuestions.length > 0 ? (
         <ul>
           {incorrectQuestions.map((q, idx) => {
-            idx
             const index = questions.indexOf(q);
-            return (
-              <li key={index}>
-                <p className="question">
-                  <strong>Q:</strong> {q.prompt}
-                </p>
-                <p className="user-answer">
-                  <strong>Your answer:</strong> {answers[index] || "No answer"}
-                </p>
-                <p className="correct-answer">
-                  <strong>Correct answer:</strong> {q.answer}
-                </p>
-              </li>
-            );
+            if (q.type === "reading") {
+              const subQuestionIndex = Math.floor(idx / q.questions.length);
+              const subQuestion = q.questions[subQuestionIndex];
+              return (
+                <li key={index}>
+                  <p className="question">
+                    <strong>Q:</strong> {subQuestion.prompt}
+                  </p>
+                  <p className="user-answer">
+                    <strong>Your answer:</strong> {answers[index] || "No answer"}
+                  </p>
+                  <p className="correct-answer">
+                    <strong>Correct answer:</strong> {subQuestion.answer}
+                  </p>
+                </li>
+              );
+            } else {
+              return (
+                <li key={index}>
+                  <p className="question">
+                    <strong>Q:</strong> {q.prompt}
+                  </p>
+                  <p className="user-answer">
+                    <strong>Your answer:</strong> {answers[index] || "No answer"}
+                  </p>
+                  <p className="correct-answer">
+                    <strong>Correct answer:</strong> {q.answer}
+                  </p>
+                </li>
+              );
+            }
           })}
         </ul>
       ) : (
