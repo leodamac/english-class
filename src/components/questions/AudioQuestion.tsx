@@ -12,9 +12,12 @@ const AudioQuestion: React.FC<Props> = ({ question, onAnswer }) => {
     audio.play();
   };
 
+  playAudio;
+
   return (
     <section className="question">
-      {/* <button onClick={playAudio}>Play Audio</button> */}
+      {/*"<button onClick={playAudio}>Play Audio</button>"*/}
+
       <p>{question.prompt}</p>
       <ul>
         {question.options.map((option, i) => (

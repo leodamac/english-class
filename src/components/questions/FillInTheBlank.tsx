@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FillInTheBlankQuestion } from "../../types";
 
 type Props = {
@@ -11,7 +11,8 @@ const FillInTheBlank: React.FC<Props> = ({ question, onAnswer }) => {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    onAnswer(input.trim());
+    onAnswer(input.toLowerCase().trim());
+    setInput("");
   };
 
   return (

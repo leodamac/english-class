@@ -3,8 +3,10 @@ import questions from "../data/questions";
 import MultipleChoice from "./questions/MultipleChoice";
 import FillInTheBlank from "./questions/FillInTheBlank";
 import AudioQuestion from "./questions/AudioQuestion";
+import ReadingQuestion from "./questions/Reading";
 import Result from "./Result";
 import { Question, AnswerMap } from "../types";
+
 
 const shuffleArray = <T,>(array: T[]): T[] => {
   const shuffled = [...array];
@@ -58,6 +60,8 @@ const Quiz: React.FC = () => {
       return <FillInTheBlank question={question} onAnswer={handleAnswer} />;
     case "audio":
       return <AudioQuestion question={question} onAnswer={handleAnswer} />;
+    case "reading":
+      return <ReadingQuestion question={question} onAnswer={handleAnswer} />;
     default:
       return null;
   }

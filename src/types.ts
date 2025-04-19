@@ -1,4 +1,4 @@
-export type QuestionType = "multiple-choice" | "fill-in-the-blank" | "audio";
+export type QuestionType = "multiple-choice" | "fill-in-the-blank" | "audio" | "reading";
 
 export interface BaseQuestion {
   type: QuestionType;
@@ -21,9 +21,23 @@ export interface AudioQuestionType extends BaseQuestion {
   options: string[];
 }
 
+export interface ReadingSubQuestion extends Omit<MultipleChoiceQuestion, "type"> {}
+
+export interface ReadingQuestionType {
+  type: "reading";
+  passage: string;
+  questions: ReadingSubQuestion[];
+}
+
+export type AnswerMap = Record<number, string>;
+
+export type ExtendedAnswerMap = {
+  [questionIndex: number]: string | string[];
+};
+
+
 export type Question =
   | MultipleChoiceQuestion
   | FillInTheBlankQuestion
-  | AudioQuestionType;
-
-export type AnswerMap = Record<number, string>;
+  | AudioQuestionType
+  | ReadingQuestionType;
