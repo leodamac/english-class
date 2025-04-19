@@ -6,6 +6,174 @@ const questions: Question[] = [
     prompt: "She ____ to the gym every day.",
     options: ["go", "goes", "going"],
     answer: "goes",
+  }, 
+  {
+    type: "reading",
+    passage: `
+      Michael enjoys spending his weekends outdoors. Every Saturday morning, he goes hiking with a group of friends. 
+      They explore different trails around their town and often discover beautiful views and hidden waterfalls. 
+      After the hike, they usually stop at a small café to grab lunch and talk about their next adventure. 
+      Michael believes that spending time in nature helps him relax and recharge after a busy week at work.
+    `,
+    questions: [
+      {
+        type: "multiple-choice",
+        prompt: "What does Michael do every Saturday morning?",
+        options: ["He works in his garden", "He goes hiking", "He visits his family", "He sleeps in late"],
+        answer: "He goes hiking"
+      }
+    ]
+  },
+  {
+    type: "reading",
+    passage: `
+      Emma recently adopted a cat from the local animal shelter. The cat, named Luna, was very shy at first and 
+      would often hide under the bed. Over time, Emma patiently gained her trust by offering treats and speaking 
+      gently to her. Now, Luna follows Emma around the house, plays with toys, and even sleeps at the foot of her bed. 
+      Emma is happy to have given Luna a loving home.
+    `,
+    questions: [
+      {
+        type: "multiple-choice",
+        prompt: "How did Luna behave when Emma first adopted her?",
+        options: ["She was playful and friendly", "She was shy and hid", "She meowed loudly", "She scratched the furniture"],
+        answer: "She was shy and hid"
+      }
+    ]
+  },
+  {
+    type: "reading",
+    passage: `
+      On Mondays, the local library hosts a storytelling hour for children. A librarian reads picture books out loud 
+      while the kids sit on colorful bean bags and listen attentively. Sometimes, they sing songs or do simple crafts 
+      related to the story. Parents enjoy watching their children engage with books and make new friends. 
+      The library hopes to inspire a love of reading from an early age.
+    `,
+    questions: [
+      {
+        type: "multiple-choice",
+        prompt: "What activity is held at the library on Mondays?",
+        options: ["Book signing", "Storytelling hour", "Homework help", "Movie night"],
+        answer: "Storytelling hour"
+      }
+    ]
+  },
+  {
+    type: "reading",
+    passage: `
+      Jake is training for his first marathon. He runs five days a week and follows a strict diet to stay healthy. 
+      On weekends, he does longer runs to build his endurance. He also makes sure to stretch before and after each run 
+      to avoid injuries. His goal is to complete the marathon in under four hours, and he's been tracking his progress 
+      with a running app on his phone.
+    `,
+    questions: [
+      {
+        type: "multiple-choice",
+        prompt: "What is Jake preparing for?",
+        options: ["A school exam", "A marathon", "A bike race", "A hiking trip"],
+        answer: "A marathon"
+      }
+    ]
+  },
+  {
+    type: "reading",
+    passage: `
+      Olivia loves to bake. She started baking with her grandmother when she was just six years old. 
+      Now, she tries new recipes every weekend and shares her cakes and cookies with neighbors and friends. 
+      Her chocolate chip cookies are especially popular. Olivia dreams of opening her own bakery someday, 
+      where she can sell her favorite treats and teach baking classes to kids.
+    `,
+    questions: [
+      {
+        type: "multiple-choice",
+        prompt: "What is Olivia's dream for the future?",
+        options: ["To become a teacher", "To open a bakery", "To be a chef on TV", "To travel the world"],
+        answer: "To open a bakery"
+      }
+    ]
+  },
+  {
+    type: "reading",
+    passage: `
+      Thomas recently started riding his bike to work instead of driving. He found that it saves money on gas, 
+      helps him stay in shape, and is better for the environment. The ride takes about 25 minutes each way, 
+      and he enjoys listening to music or podcasts as he cycles. Even on rainy days, he wears a raincoat and pedals on. 
+      He now encourages his coworkers to try biking too.
+    `,
+    questions: [
+      {
+        type: "multiple-choice",
+        prompt: "Why did Thomas start biking to work?",
+        options: ["His car broke down", "He enjoys cycling", "To save money and stay fit", "He lost his driver's license"],
+        answer: "To save money and stay fit"
+      }
+    ]
+  },
+  {
+    type: "reading",
+    passage: `
+      Natalie volunteers at a local animal shelter every Sunday. She helps feed the animals, clean their spaces, 
+      and play with the dogs and cats to keep them active. Some of the animals were rescued from difficult situations, 
+      so Natalie makes sure to give them extra attention. Her favorite part is when animals get adopted and find 
+      their forever homes.
+    `,
+    questions: [
+      {
+        type: "multiple-choice",
+        prompt: "What does Natalie do at the animal shelter?",
+        options: ["Trains animals", "Takes photos", "Volunteers to help care for them", "Works as a vet"],
+        answer: "Volunteers to help care for them"
+      }
+    ]
+  },
+  {
+    type: "reading",
+    passage: `
+      Every summer, Leo visits his grandparents' farm in the countryside. He helps feed the chickens, collect eggs, 
+      and water the vegetable garden. In the afternoons, he rides his bike along the dirt roads and swims in the nearby river. 
+      Leo enjoys the quiet, simple life on the farm and looks forward to his visit every year.
+    `,
+    questions: [
+      {
+        type: "multiple-choice",
+        prompt: "What does Leo enjoy doing during his summer visits?",
+        options: ["Reading books at home", "Helping on the farm and enjoying nature", "Playing video games", "Going to the beach"],
+        answer: "Helping on the farm and enjoying nature"
+      }
+    ]
+  },
+  {
+    type: "reading",
+    passage: `
+      Sarah is studying French because she wants to study abroad in Paris next year. She takes evening classes twice a week 
+      and practices speaking with a language partner online. She also watches French movies and listens to French music 
+      to improve her understanding. Her goal is to feel confident speaking with locals when she arrives.
+    `,
+    questions: [
+      {
+        type: "multiple-choice",
+        prompt: "Why is Sarah learning French?",
+        options: ["She wants to become a French teacher", "Her job requires it", "She wants to study abroad", "She has French friends"],
+        answer: "She wants to study abroad"
+      }
+    ]
+  },
+  {
+    type: "reading",
+    passage: `
+      On Sunday mornings, Mr. Davis goes to the local park to paint. He sets up his easel near the lake and paints 
+      the scenery around him—trees, flowers, and people walking their dogs. Sometimes children stop to watch him work, 
+      and he smiles and shows them his brushes. Mr. Davis has been painting for over 20 years and finds joy in capturing 
+      peaceful moments.
+    `,
+    questions: [
+      {
+        type: "multiple-choice",
+        prompt: "What does Mr. Davis enjoy doing on Sunday mornings?",
+        options: ["Walking his dog", "Jogging by the lake", "Painting in the park", "Reading a book"],
+        answer: "Painting in the park"
+      }
+    ]
   },
   {
     type: "reading",
