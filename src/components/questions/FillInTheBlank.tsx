@@ -15,6 +15,8 @@ const FillInTheBlank: React.FC<Props> = ({ question, onAnswer }) => {
     setInput("");
   };
 
+  useEffect;
+
   return (
     <form className="question" onSubmit={submit}>
       <label>
