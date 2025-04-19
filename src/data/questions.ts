@@ -9,361 +9,244 @@ const questions: Question[] = [
   },
   {
     type: "reading",
-    passage: "Tom enjoys reading books in the library every weekend. His favorite genre is mystery.",
+    passage: "Alice wakes up at 6 a.m. every morning. She eats breakfast and takes the bus to school.",
     questions: [
       {
-        prompt: "What is Tom's favorite genre?",
-        options: ["Mystery", "Fantasy", "Sci-Fi"],
-        answer: "Mystery",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "What time does Alice wake up?",
+        options: ["7 a.m.", "6 a.m.", "8 a.m."],
+        answer: "6 a.m."
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Mary loves to play the piano. She practices for one hour every day after school.",
+    passage: "Tom plays football on the weekends with his friends in the park.",
     questions: [
       {
-        prompt: "How long does Mary practice the piano each day?",
-        options: ["30 minutes", "One hour", "Two hours"],
-        answer: "One hour",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "Where does Tom play football?",
+        options: ["At school", "In the park", "In the street"],
+        answer: "In the park"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "John and his family go to the beach every summer. They enjoy swimming and playing volleyball.",
+    passage: "Maria reads a book every night before going to bed.",
     questions: [
       {
-        prompt: "What do John and his family enjoy doing at the beach?",
-        options: ["Swimming and playing volleyball", "Surfing and sunbathing", "Reading and eating"],
-        answer: "Swimming and playing volleyball",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "What does Maria do before bed?",
+        options: ["Watches TV", "Reads a book", "Plays games"],
+        answer: "Reads a book"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Samantha visits her grandparents every Sunday. She loves spending time with them and listening to their stories.",
+    passage: "John eats lunch at 12:30 p.m. in the cafeteria with his coworkers.",
     questions: [
       {
-        prompt: "What does Samantha like to do with her grandparents?",
-        options: ["Spend time and listen to their stories", "Go shopping with them", "Cook meals with them"],
-        answer: "Spend time and listen to their stories",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "Where does John eat lunch?",
+        options: ["At home", "In the cafeteria", "At a restaurant"],
+        answer: "In the cafeteria"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Mark works in a restaurant. He enjoys cooking and serving food to customers.",
+    passage: "Lena walks to school every day because she lives nearby.",
     questions: [
       {
-        prompt: "Where does Mark work?",
-        options: ["In a restaurant", "In an office", "In a school"],
-        answer: "In a restaurant",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "Why does Lena walk to school?",
+        options: ["She enjoys it", "She lives nearby", "She misses the bus"],
+        answer: "She lives nearby"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Sarah loves to travel. She has visited many countries, including Japan, France, and Italy.",
+    passage: "Mark drinks coffee every morning to feel more awake.",
     questions: [
       {
-        prompt: "Which countries has Sarah visited?",
-        options: ["Japan, France, and Italy", "Germany, Spain, and Portugal", "USA, Canada, and Mexico"],
-        answer: "Japan, France, and Italy",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "Why does Mark drink coffee?",
+        options: ["To sleep", "To stay warm", "To feel more awake"],
+        answer: "To feel more awake"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Lucas enjoys playing video games. He often plays with his friends online.",
+    passage: "Sophie goes to the gym three times a week to stay healthy.",
     questions: [
       {
-        prompt: "What does Lucas enjoy doing?",
-        options: ["Playing video games", "Reading books", "Watching movies"],
-        answer: "Playing video games",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "How often does Sophie go to the gym?",
+        options: ["Every day", "Three times a week", "Once a month"],
+        answer: "Three times a week"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Anna loves painting. She spends hours in her studio creating beautiful landscapes and portraits.",
+    passage: "They watch a movie every Friday night as a family tradition.",
     questions: [
       {
-        prompt: "What does Anna love to do?",
-        options: ["Painting", "Swimming", "Dancing"],
-        answer: "Painting",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "When do they watch a movie?",
+        options: ["Saturday", "Friday night", "Sunday morning"],
+        answer: "Friday night"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "David is a soccer player. He practices every day to improve his skills.",
+    passage: "James cleans his room every Saturday morning.",
     questions: [
       {
-        prompt: "What sport does David play?",
-        options: ["Soccer", "Basketball", "Tennis"],
-        answer: "Soccer",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "What does James do on Saturday morning?",
+        options: ["Plays games", "Cleans his room", "Goes to school"],
+        answer: "Cleans his room"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Emma enjoys hiking in the mountains. She goes on long hikes with her friends during the weekends.",
+    passage: "Linda and her sister visit their grandparents every Sunday.",
     questions: [
       {
-        prompt: "What does Emma enjoy doing?",
-        options: ["Hiking in the mountains", "Shopping", "Cycling"],
-        answer: "Hiking in the mountains",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "Who do Linda and her sister visit?",
+        options: ["Friends", "Cousins", "Grandparents"],
+        answer: "Grandparents"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Carlos is a teacher. He loves his job because he enjoys helping students learn new things.",
+    passage: "The teacher explains the lesson clearly every day.",
     questions: [
       {
-        prompt: "What is Carlos's job?",
-        options: ["Teacher", "Doctor", "Engineer"],
-        answer: "Teacher",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "How often does the teacher explain the lesson?",
+        options: ["Sometimes", "Every day", "Only on Monday"],
+        answer: "Every day"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Olivia plays tennis every afternoon. She is part of her school's tennis team.",
+    passage: "My dad works in an office from Monday to Friday.",
     questions: [
       {
-        prompt: "What sport does Olivia play?",
-        options: ["Tennis", "Basketball", "Football"],
-        answer: "Tennis",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "Where does my dad work?",
+        options: ["At home", "In an office", "In a hospital"],
+        answer: "In an office"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Jack enjoys watching movies. He goes to the cinema with his friends once a month.",
+    passage: "The cat sleeps on the sofa in the afternoon.",
     questions: [
       {
-        prompt: "How often does Jack go to the cinema?",
-        options: ["Once a month", "Every week", "Every day"],
-        answer: "Once a month",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "Where does the cat sleep?",
+        options: ["On the bed", "On the sofa", "On the floor"],
+        answer: "On the sofa"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Lily enjoys reading novels. She reads for at least one hour every evening before bed.",
+    passage: "Paul goes jogging every morning in the park.",
     questions: [
       {
-        prompt: "How long does Lily read each evening?",
-        options: ["One hour", "30 minutes", "Two hours"],
-        answer: "One hour",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "When does Paul go jogging?",
+        options: ["At night", "Every morning", "In the afternoon"],
+        answer: "Every morning"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Ethan loves animals. He has a dog, a cat, and a rabbit at home.",
+    passage: "Emma studies English at the library after school.",
     questions: [
       {
-        prompt: "What pets does Ethan have?",
-        options: ["A dog, a cat, and a rabbit", "A dog and a bird", "A cat and a hamster"],
-        answer: "A dog, a cat, and a rabbit",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "Where does Emma study English?",
+        options: ["At school", "At home", "At the library"],
+        answer: "At the library"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Sophia likes to cook. She often prepares dinner for her family and friends.",
+    passage: "Liam cooks dinner for his family every night.",
     questions: [
       {
-        prompt: "What does Sophia like to do?",
-        options: ["Cook", "Dance", "Play sports"],
-        answer: "Cook",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "What does Liam cook?",
+        options: ["Lunch", "Snacks", "Dinner"],
+        answer: "Dinner"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Nina enjoys playing the violin. She practices every day for an hour to improve her skills.",
+    passage: "Julie calls her best friend every evening.",
     questions: [
       {
-        prompt: "How long does Nina practice the violin each day?",
-        options: ["One hour", "30 minutes", "Two hours"],
-        answer: "One hour",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "Who does Julie call?",
+        options: ["Her sister", "Her best friend", "Her teacher"],
+        answer: "Her best friend"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Alex loves going to the gym. He works out every morning before work.",
+    passage: "We visit the museum on the first Saturday of every month.",
     questions: [
       {
-        prompt: "When does Alex go to the gym?",
-        options: ["Every morning before work", "Every evening", "On weekends"],
-        answer: "Every morning before work",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "When do we visit the museum?",
+        options: ["Every week", "On Saturdays", "Once a month"],
+        answer: "Once a month"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Bella enjoys photography. She often takes pictures of nature and landscapes during her hikes.",
+    passage: "Henry practices the piano every afternoon after school.",
     questions: [
       {
-        prompt: "What does Bella enjoy doing?",
-        options: ["Photography", "Reading", "Dancing"],
-        answer: "Photography",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "What instrument does Henry practice?",
+        options: ["Guitar", "Drums", "Piano"],
+        answer: "Piano"
+      }
+    ]
   },
   {
     type: "reading",
-    passage: "Oliver loves playing chess. He often plays with his grandfather on weekends.",
+    passage: "Nina takes her dog for a walk in the park every evening.",
     questions: [
       {
-        prompt: "Who does Oliver play chess with?",
-        options: ["His grandfather", "His friends", "His sister"],
-        answer: "His grandfather",
-      },
-    ],
+        type: "multiple-choice",
+        prompt: "What does Nina do every evening?",
+        options: ["Cooks dinner", "Walks her dog", "Watches TV"],
+        answer: "Walks her dog"
+      }
+    ]
   },
-  {
-    type: "reading",
-    passage: "Chloe enjoys baking. She often makes cakes and cookies for her family.",
-    questions: [
-      {
-        prompt: "What does Chloe enjoy doing?",
-        options: ["Baking", "Painting", "Swimming"],
-        answer: "Baking",
-      },
-    ],
-  },
-  {
-    type: "reading",
-    passage: "George loves cycling. He rides his bike every morning to stay fit.",
-    questions: [
-      {
-        prompt: "Why does George cycle every morning?",
-        options: ["To stay fit", "For fun", "To go to work"],
-        answer: "To stay fit",
-      },
-    ],
-  },
-  {
-    type: "reading",
-    passage: "Ella is passionate about fashion. She spends a lot of time designing clothes in her free time.",
-    questions: [
-      {
-        prompt: "What is Ella passionate about?",
-        options: ["Fashion", "Music", "Cooking"],
-        answer: "Fashion",
-      },
-    ],
-  },
-  {
-    type: "reading",
-    passage: "Nathan enjoys fishing. He goes to the lake every weekend with his friends.",
-    questions: [
-      {
-        prompt: "Where does Nathan go every weekend?",
-        options: ["To the lake", "To the beach", "To the park"],
-        answer: "To the lake",
-      },
-    ],
-  },
-  {
-    type: "reading",
-    passage: "Isabella loves gardening. She plants flowers and vegetables in her backyard.",
-    questions: [
-      {
-        prompt: "What does Isabella do in her backyard?",
-        options: ["Plant flowers and vegetables", "Play sports", "Read books"],
-        answer: "Plant flowers and vegetables",
-      },
-    ],
-  },
-  {
-    type: "reading",
-    passage: "Mason enjoys running. He participates in 5k races every month.",
-    questions: [
-      {
-        prompt: "What does Mason do every month?",
-        options: ["Participates in 5k races", "Plays football", "Goes to the gym"],
-        answer: "Participates in 5k races",
-      },
-    ],
-  },
-  {
-    type: "reading",
-    passage: "Zoe loves spending time at the beach. She enjoys swimming and building sandcastles.",
-    questions: [
-      {
-        prompt: "What does Zoe enjoy doing at the beach?",
-        options: ["Swimming and building sandcastles", "Surfing", "Reading books"],
-        answer: "Swimming and building sandcastles",
-      },
-    ],
-  },
-  {
-    type: "reading",
-    passage: "Henry is learning to play the guitar. He practices every day for 30 minutes.",
-    questions: [
-      {
-        prompt: "How long does Henry practice the guitar each day?",
-        options: ["30 minutes", "One hour", "Two hours"],
-        answer: "30 minutes",
-      },
-    ],
-  },
-  {
-    type: "reading",
-    passage: "Ava enjoys traveling by train. She finds it relaxing and scenic.",
-    questions: [
-      {
-        prompt: "How does Ava enjoy traveling?",
-        options: ["By train", "By car", "By plane"],
-        answer: "By train",
-      },
-    ],
-  },
-  {
-    type: "reading",
-    passage: "Daniel enjoys playing basketball with his friends at the park every Saturday.",
-    questions: [
-      {
-        prompt: "Where does Daniel play basketball?",
-        options: ["At the park", "At school", "At home"],
-        answer: "At the park",
-      },
-    ],
-  },
-  {type: "reading",
-  passage: `Sarah wakes up at 6 a.m. every day. She eats breakfast and then walks to school. After school, she plays soccer with her friends.`,
-  questions: [
-    {
-      prompt: "What time does Sarah wake up?",
-      options: ["6 a.m.", "7 a.m.", "8 a.m."],
-      answer: "6 a.m."
-    }
-  ]},
-  {    type: "reading",
-    passage: `Sarah wakes up at 6 a.m. every day. She eats breakfast and then walks to school. After school, she plays soccer with her friends.`,
-    questions: [
-    {
-      prompt: "What does Sarah do after school?",
-      options: ["She studies", "She goes home", "She plays soccer"],
-      answer: "She plays soccer"
-    }
-  ]},
-  {    type: "reading",
-    passage: `Sarah wakes up at 6 a.m. every day. She eats breakfast and then walks to school. After school, she plays soccer with her friends.`,
-    questions: [
-    {
-      prompt: "What does Sarah do after school?",
-      options: ["She studies", "She goes home", "She plays soccer"],
-      answer: "She plays soccer"
-    }
-  ]},
   {
     type: "fill-in-the-blank",
     prompt: "I ____ (drink) coffee in the morning.",
