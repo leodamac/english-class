@@ -27,24 +27,10 @@ export interface AudioQuestionType extends BaseQuestion {
   answer: string;
 }
 
-export interface ReadingSubQuestion {
-  type: "multiple-choice";
-  prompt: string;
-  options: string[];
-  answer: string;
-}
-
-export interface ReadingQuestionType extends BaseQuestion {
-  type: "reading";
-  passage: string;
-  questions: ReadingSubQuestion[];
-  // No necesita `prompt` ni `answer` aquí
-}
 
 export type Question =
   | MultipleChoiceQuestion
   | FillInTheBlankQuestion
-  | AudioQuestionType
-  | ReadingQuestionType;
+  | AudioQuestionType;
 
   export type AnswerMap = Record<string, string>;

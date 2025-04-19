@@ -18,22 +18,6 @@ const Result: React.FC<Props> = ({ questions, answers, onReset }) => {
   }[] = [];
 
   questions.forEach((q, qIndex) => {
-    if (q.type === "reading") {
-      q.questions.forEach((subQ, subIndex) => {
-        totalQuestions++;
-        const key = `${qIndex}-${subIndex}`;
-        const userAnswer = answers[key];
-        if (userAnswer === subQ.answer) {
-          correctAnswers++;
-        } else {
-          incorrectEntries.push({
-            prompt: subQ.prompt,
-            userAnswer: userAnswer || "No answer",
-            correctAnswer: subQ.answer,
-          });
-        }
-      });
-    } else {
       totalQuestions++;
       const userAnswer = answers[qIndex];
       if (userAnswer === q.answer) {
@@ -44,7 +28,6 @@ const Result: React.FC<Props> = ({ questions, answers, onReset }) => {
           userAnswer: userAnswer || "No answer",
           correctAnswer: q.answer,
         });
-      }
     }
   });
 
