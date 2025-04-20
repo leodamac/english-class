@@ -12,9 +12,9 @@ const Result: React.FC<Props> = ({ questions, answers, onReset }) => {
   let correctAnswers = 0;
 
   const incorrectEntries: {
-    prompt: string;
+    prompt?: string;
     userAnswer: string;
-    correctAnswer: string;
+    correctAnswer?: string;
   }[] = [];
 
   questions.forEach((q, qIndex) => {

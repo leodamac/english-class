@@ -9,7 +9,6 @@ function SimplePresentQuiz() {
       <h1>Simple Present Quiz</h1>
       <Quiz />
       <p></p>
-      <p></p>
       <button onClick={() => navigate("/simplepresentinfo")}>
         {"<- Back to Simple Present Information"}
       </button>

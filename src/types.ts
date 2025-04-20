@@ -1,9 +1,15 @@
-export type QuestionType = "multiple-choice" | "fill-in-the-blank" | "audio" | "reading";
+// types.ts
+
+export type QuestionType =
+  | "multiple-choice"
+  | "fill-in-the-blank"
+  | "audio"
+  | "reading";
 
 export interface BaseQuestion {
   type: QuestionType;
-  prompt?: string; // <- hacerlo opcional
-  answer?: string; // <- también opcional para tipos que no lo usen directamente
+  prompt?: string;
+  answer?: string;
 }
 
 export interface MultipleChoiceQuestion extends BaseQuestion {
@@ -27,10 +33,9 @@ export interface AudioQuestionType extends BaseQuestion {
   answer: string;
 }
 
-
 export type Question =
   | MultipleChoiceQuestion
   | FillInTheBlankQuestion
-  | AudioQuestionType;
+  | AudioQuestionType
 
-  export type AnswerMap = Record<string, string>;
+export type AnswerMap = Record<string, string>;

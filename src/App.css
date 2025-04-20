@@ -74,10 +74,7 @@ main h1 {
   font-size: 2rem;
 }
 
-/* General question block */
-.question {
-  margin-bottom: 2rem;
-}
+
 
 .question p {
   margin-bottom: 1rem;
@@ -140,4 +137,5 @@ input[type="text"] {
 .correct-answer{
   font-size: 1rem;
   color: #28a745;
+  margin-bottom: 1rem;
 }

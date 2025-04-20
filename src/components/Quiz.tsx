@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import questions from "../data/questions";
-import MultipleChoice from "./questions/MultipleChoice";
-import FillInTheBlank from "./questions/FillInTheBlank";
-import AudioQuestion from "./questions/AudioQuestion";
 import Result from "./Result";
 import { Question, AnswerMap } from "../types";
-
+import questions from "../data/questions";
+import { getQuestionComponent } from "../utils/questionComponentRegistry";
+import "../components/questions";
 
 const shuffleArray = <T,>(array: T[]): T[] => {
   const shuffled = [...array];
@@ -50,18 +48,8 @@ const Quiz: React.FC = () => {
     return <Result questions={quizQuestions} answers={answers} onReset={resetQuiz} />;
   }
 
-  const question: Question = quizQuestions[current];
-
-  switch (question.type) {
-    case "multiple-choice":
-      return <MultipleChoice question={question} onAnswer={handleAnswer} />;
-    case "fill-in-the-blank":
-      return <FillInTheBlank question={question} onAnswer={handleAnswer} />;
-    case "audio":
-      return <AudioQuestion question={question} onAnswer={handleAnswer} />;
-    default:
-      return null;
-  }
+  const question = quizQuestions[current];
+  return getQuestionComponent(question, handleAnswer);
 };
 
 export default Quiz;

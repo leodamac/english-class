@@ -6,8 +6,7 @@ const questions: Question[] = [
     prompt: "She ____ to the gym every day.",
     options: ["go", "goes", "going"],
     answer: "goes",
-  },
-  {
+  },{
     type: "fill-in-the-blank",
     prompt: "I ____ (drink) coffee in the morning.",
     answer: "drink",
@@ -327,6 +326,7 @@ const questions: Question[] = [
     options: ["He play football", "He plays football", "He playing football"],
     answer: "He plays football",
   },  
+  
 ];
 
 export default questions;
