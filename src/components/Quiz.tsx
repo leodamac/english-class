@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Result from "./Result";
 import { Question, AnswerMap } from "../types";
-import questions from "../data/questions";
+import questions from "../data/pcquestions";
 import { getQuestionComponent } from "../utils/questionComponentRegistry";
 import "../components/questions";
 
