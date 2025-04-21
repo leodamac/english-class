@@ -6,7 +6,7 @@ function PresentContinuousQuiz() {
   const navigate = useNavigate();
   return (
     <main>
-      <h1>Simple Present Quiz</h1>
+      <h1>Present Continuous Quiz</h1>
       <Quiz />
       <p></p>
       <button onClick={() => navigate("/presentcontinuousinfo")}>
