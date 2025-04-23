@@ -1,41 +1,33 @@
-// types.ts
+export type QuestionType = "text" | "single-select" | "multi-select";
 
-export type QuestionType =
-  | "multiple-choice"
-  | "fill-in-the-blank"
-  | "audio"
-  | "reading";
-
-export interface BaseQuestion {
+export type Question = {
+  id: string;
   type: QuestionType;
-  prompt?: string;
-  answer?: string;
-}
-
-export interface MultipleChoiceQuestion extends BaseQuestion {
-  type: "multiple-choice";
   prompt: string;
-  options: string[];
-  answer: string;
-}
+  instructions?: string;
+  audioSrc?: string;
+  options?: string[];
+  answer: string[];
+  allowMultipleSelections?: boolean;
+};
 
-export interface FillInTheBlankQuestion extends BaseQuestion {
-  type: "fill-in-the-blank";
-  prompt: string;
-  answer: string;
-}
+export type ResponseType = {
+  id: string;
+  type: string;
+  instructions?: string;
+  correctAnswers: string[];
+  options?: string[]; 
+  value?: string;
+  orderMatters?: boolean;
+  onAnswer: (answer: string) => void;
+};
 
-export interface AudioQuestionType extends BaseQuestion {
-  type: "audio";
-  prompt: string;
-  audioSrc: string;
-  options: string[];
-  answer: string;
-}
+export type AnswerType = {
+  value: string[];
+  isCorrect: boolean;
+};
 
-export type Question =
-  | MultipleChoiceQuestion
-  | FillInTheBlankQuestion
-  | AudioQuestionType
 
-export type AnswerMap = Record<string, string>;
+export type AnswerMap = {
+  [key: number]: string[];
+};

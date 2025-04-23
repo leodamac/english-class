@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Result from "./Result";
-import { Question, AnswerMap } from "../types";
-import questions from "../data/questions";
+import { Question, AnswerMap, AnswerType } from "../types";
 import { getQuestionComponent } from "../utils/questionComponentRegistry";
 import "../components/questions";
+
+interface QuizProps {
+  questions: Question[];
+}
 
 const shuffleArray = <T,>(array: T[]): T[] => {
   const shuffled = [...array];
@@ -14,7 +17,7 @@ const shuffleArray = <T,>(array: T[]): T[] => {
   return shuffled;
 };
 
-const Quiz: React.FC = () => {
+const Quiz: React.FC<QuizProps> = ({ questions }) => {
   const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
   const [current, setCurrent] = useState<number>(0);
   const [answers, setAnswers] = useState<AnswerMap>({});
@@ -23,17 +26,20 @@ const Quiz: React.FC = () => {
   useEffect(() => {
     const selected = shuffleArray(questions).slice(0, 10);
     setQuizQuestions(selected);
-  }, []);
+  }, [questions]);
 
-  const handleAnswer = (answer: string) => {
-    setAnswers((prev) => ({ ...prev, [current]: answer }));
+  const handleAnswer = (answer: AnswerType) => {
+    setAnswers((prev) => ({
+      ...prev,
+      [current]: Array.isArray(answer.value) ? answer.value : [answer.value],
+    }));
+  
     if (current + 1 < quizQuestions.length) {
       setCurrent(current + 1);
     } else {
       setFinished(true);
     }
   };
-
   const resetQuiz = () => {
     const selected = shuffleArray(questions).slice(0, 10);
     setQuizQuestions(selected);
@@ -47,9 +53,15 @@ const Quiz: React.FC = () => {
   if (finished) {
     return <Result questions={quizQuestions} answers={answers} onReset={resetQuiz} />;
   }
-
+  
   const question = quizQuestions[current];
-  return getQuestionComponent(question, handleAnswer);
+  const QuestionComponent = getQuestionComponent(question.type);
+  
+  if (!QuestionComponent) {
+    return <p>Error: No renderer for question type "{question.type}"</p>;
+  }
+  
+  return <QuestionComponent question={question} onAnswer={handleAnswer} />;
 };
 
 export default Quiz;

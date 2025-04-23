@@ -1,0 +1,44 @@
+.main-page {
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .topic-grid li {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .topic-grid li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+  }
+  
+  @media (max-width: 600px) {
+    .topic-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

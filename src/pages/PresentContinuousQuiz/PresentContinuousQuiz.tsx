@@ -1,19 +1,12 @@
-import Quiz from "../../components/Quiz";
-import "../../App.css";
-import { useNavigate } from "react-router-dom";
+import questions from "../../data/presentContinuousQuestions";
+import QuizPage from "../QuizModel/QuizModel";
 
-function PresentContinuousQuiz() {
-  const navigate = useNavigate();
+export default function PresentContinuousQuiz() {
   return (
-    <main>
-      <h1>Present Continuous Quiz</h1>
-      <Quiz />
-      <p></p>
-      <button onClick={() => navigate("/presentcontinuousinfo")}>
-        {"<- Back to Present Continuous Information"}
-      </button>
-    </main>
+    <QuizPage
+      title="Present Continuous Quiz"
+      questions={questions}
+      backTo="/presentcontinuousinfo"
+    />
   );
 }
-
-export default PresentContinuousQuiz;

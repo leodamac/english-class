@@ -10,24 +10,31 @@ type Props = {
 const Result: React.FC<Props> = ({ questions, answers, onReset }) => {
   let totalQuestions = 0;
   let correctAnswers = 0;
-
   const incorrectEntries: {
-    prompt?: string;
-    userAnswer: string;
-    correctAnswer?: string;
+    prompt: string;
+    userAnswer: string[];
+    correctAnswer: string[];
   }[] = [];
 
   questions.forEach((q, qIndex) => {
-      totalQuestions++;
-      const userAnswer = answers[qIndex];
-      if (userAnswer === q.answer) {
-        correctAnswers++;
-      } else {
-        incorrectEntries.push({
-          prompt: q.prompt,
-          userAnswer: userAnswer || "No answer",
-          correctAnswer: q.answer,
-        });
+    totalQuestions++;
+    const userAnswer = answers[qIndex] || [];
+    const correctAnswer = q.answer.map((a) => a.toLowerCase());
+    const normalizedUserAnswer = userAnswer.map((a) => a.toLowerCase());
+
+    // Verificamos si todas las respuestas del usuario son correctas (sin importar orden)
+    const isCorrect =
+      normalizedUserAnswer.length === correctAnswer.length &&
+      normalizedUserAnswer.every((ans) => correctAnswer.includes(ans));
+
+    if (isCorrect) {
+      correctAnswers++;
+    } else {
+      incorrectEntries.push({
+        prompt: q.prompt,
+        userAnswer,
+        correctAnswer: q.answer,
+      });
     }
   });
 
@@ -47,10 +54,11 @@ const Result: React.FC<Props> = ({ questions, answers, onReset }) => {
                 <strong>Q:</strong> {entry.prompt}
               </p>
               <p className="user-answer">
-                <strong>Your answer:</strong> {entry.userAnswer}
+                <strong>Your answer:</strong> {entry.userAnswer.join(", ")}
               </p>
               <p className="correct-answer">
-                <strong>Correct answer:</strong> {entry.correctAnswer}
+                <strong>Correct answer:</strong>{" "}
+                {entry.correctAnswer.join(", ")}
               </p>
             </li>
           ))}

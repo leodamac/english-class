@@ -15,7 +15,7 @@ const autoRoutes = Object.keys(modules).map((path) => {
 });
 
 const manualRoutes = [
-  { path: "*", element: lazy(() => import("./pages/SimplePresentInfo/SimplePresentInfo")) },
+  { path: "*", element: lazy(() => import("./pages/Main")) },
 ];
 
 const routes = [...autoRoutes, ...manualRoutes];

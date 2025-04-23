@@ -1,5 +1,5 @@
 import React from "react";
-import { Lang } from "../locales/SimplePresentContent";
+import { Lang } from "../locales/PresentSimpleContent";
 
 interface Props {
   selected: Lang;

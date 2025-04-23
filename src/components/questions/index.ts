@@ -1,8 +1,11 @@
 import { registerQuestionComponent } from "../../utils/questionComponentRegistry";
 import MultipleChoice from "./MultipleChoice";
 import FillInTheBlank from "./FillInTheBlank";
-import AudioQuestion from "./AudioQuestion";
+import SingleSelectQuestion from "./SingleSelect";
+import TextQuestion from "./TextQuestion";
 
-registerQuestionComponent("multiple-choice", MultipleChoice);
+
+registerQuestionComponent("multi-select", MultipleChoice);
 registerQuestionComponent("fill-in-the-blank", FillInTheBlank);
-registerQuestionComponent("audio", AudioQuestion);
+registerQuestionComponent("single-select",SingleSelectQuestion)
+registerQuestionComponent("text", TextQuestion);

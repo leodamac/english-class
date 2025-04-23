@@ -1,31 +1,17 @@
-import { JSX } from "react";
-import { Question } from "../types";
+import { AnswerType, Question } from "../types";
+import { ComponentType } from "react";
 
-export type QuestionComponentProps<Q extends Question> = {
-  question: Q;
-  onAnswer: (answer: string) => void;
-};
+type QuestionRenderer = ComponentType<{
+  question: Question;
+  onAnswer: (answer: AnswerType) => void;
+}>;
 
-const registry = new Map<Question["type"], React.ComponentType<any>>();
+const registry = new Map<string, QuestionRenderer>();
 
-export const registerQuestionComponent = <
-  Q extends Question,
-  T extends Q["type"]
->(
-  type: T,
-  component: React.ComponentType<QuestionComponentProps<Extract<Question, { type: T }>>>
-) => {
+export function registerQuestionComponent(type: string, component: QuestionRenderer) {
   registry.set(type, component);
-};
+}
 
-export const getQuestionComponent = (
-  question: Question,
-  onAnswer: (a: string) => void
-): JSX.Element => {
-  const Component = registry.get(question.type);
-  if (!Component) {
-    throw new Error(`No component registered for type ${question.type}`);
-  }
-
-  return <Component question={question as any} onAnswer={onAnswer} />;
-};
+export function getQuestionComponent(type: string): QuestionRenderer | undefined {
+  return registry.get(type);
+}
