@@ -76,426 +76,460 @@ const questions: Question[]= [
         "audioSrc": "/data/10.mp3",
         "answer": ["camping"]
       },
-    {
+      {
         "id": "q_text_11",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They are enjoying a road trip across the country."],
+        "prompt": "Complete: They are ____ a road trip across the country.",
         "audioSrc": "/data/11.mp3",
+        "answer": ["enjoying"]
     },
     {
         "id": "q_text_12",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I’m packing my suitcase for the trip."],
+        "prompt": "Complete: I’m ____ my suitcase for the trip.",
         "audioSrc": "/data/12.mp3",
+        "answer": ["packing"]
     },
     {
         "id": "q_text_13",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He is booking his flights online."],
+        "prompt": "Complete: He is ____ his flights online.",
         "audioSrc": "/data/13.mp3",
+        "answer": ["booking"]
     },
     {
         "id": "q_text_14",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["My parents are looking for a peaceful destination."],
+        "prompt": "Complete: My parents are ____ for a peaceful destination.",
         "audioSrc": "/data/14.mp3",
+        "answer": ["looking"]
     },
     {
         "id": "q_text_15",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We are visiting museums this afternoon."],
+        "prompt": "Complete: We are ____ museums this afternoon.",
         "audioSrc": "/data/15.mp3",
+        "answer": ["visiting"]
     },
     {
         "id": "q_text_16",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She is checking her passport again."],
+        "prompt": "Complete: She is ____ her passport again.",
         "audioSrc": "/data/16.mp3",
+        "answer": ["checking"]
     },
     {
         "id": "q_text_17",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I’m taking lots of pictures of the scenery."],
+        "prompt": "Complete: I’m ____ lots of pictures of the scenery.",
         "audioSrc": "/data/17.mp3",
+        "answer": ["taking"]
     },
     {
         "id": "q_text_18",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["Are they renting a car for their vacation?"],
+        "prompt": "Complete the question: Are they ____ a car for their vacation?",
         "audioSrc": "/data/18.mp3",
+        "answer": ["renting"]
     },
     {
         "id": "q_text_19",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He is sending postcards from Italy."],
+        "prompt": "Complete: He is ____ postcards from Italy.",
         "audioSrc": "/data/19.mp3",
+        "answer": ["sending"]
     },
     {
         "id": "q_text_20",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They are spending two weeks in Spain."],
+        "prompt": "Complete: They are ____ two weeks in Spain.",
         "audioSrc": "/data/20.mp3",
+        "answer": ["spending"]
     },
     {
         "id": "q_text_21",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I am trying new local dishes."],
+        "prompt": "Complete: I am ____ new local dishes.",
         "audioSrc": "/data/21.mp3",
+        "answer": ["trying"]
     },
     {
         "id": "q_text_22",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We are staying in a cabin near the lake this week."],
+        "prompt": "Complete: We are ____ in a cabin near the lake this week.",
         "audioSrc": "/data/22.mp3",
+        "answer": ["staying"]
     },
     {
         "id": "q_text_23",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She is exploring a new country."],
+        "prompt": "Complete: She is ____ a new country.",
         "audioSrc": "/data/23.mp3",
+        "answer": ["exploring"]
     },
     {
         "id": "q_text_24",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He is choosing an adventure holiday."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: He is ____ an adventure holiday.",
         "audioSrc": "/data/24.mp3",
+        "options": ["choosing", "chose", "chooses"],
+        "answer": ["choosing"]
     },
     {
         "id": "q_text_25",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["My friends are hiking in the mountains."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: My friends are ____ in the mountains.",
         "audioSrc": "/data/25.mp3",
+        "options": [
+            "hiking",
+            "riding",
+            "sleeping",
+            "walking"
+        ],
+        "answer": ["hiking", "walking"]
     },
     {
         "id": "q_text_26",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We are taking a train to Paris tomorrow."],
+        "prompt": "Complete: We are ____ a train to Paris tomorrow.",
         "audioSrc": "/data/26.mp3",
+        "answer": ["taking"]
     },
     {
         "id": "q_text_27",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She is buying souvenirs at the market."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: She is ____ souvenirs at the market.",
         "audioSrc": "/data/27.mp3",
+        "options": ["buying", "bought", "buy"],
+        "answer": ["buying"]
     },
     {
         "id": "q_text_28",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["Are you going on a cruise this year?"],
+        "prompt": "Complete the question: Are you ____ on a cruise this year?",
         "audioSrc": "/data/28.mp3",
+        "answer": ["going"]
     },
     {
         "id": "q_text_29",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They aren’t traveling in December."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: They aren’t ____ in December.",
         "audioSrc": "/data/29.mp3",
+        "options": ["traveling", "traveled", "travels"],
+        "answer": ["traveling"]
     },
     {
         "id": "q_text_30",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I’m celebrating my birthday abroad."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: I’m ____ my birthday abroad.",
         "audioSrc": "/data/30.mp3",
-    },
+        "options": [
+            "celebrating",
+            "celebrate",
+            "celebrates",
+            "celebrated"
+        ],
+        "answer": ["celebrating"]
+    },    
     {
         "id": "q_text_31",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We are eating traditional food at a local restaurant."],
+        "prompt": "Complete: We are ____ traditional food at a local restaurant.",
         "audioSrc": "/data/31.mp3",
+        "answer": ["eating"]
     },
     {
         "id": "q_text_32",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He is swimming in the ocean right now."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: He is ____ in the ocean right now.",
         "audioSrc": "/data/32.mp3",
+        "options": ["swimming", "swinging", "walking"],
+        "answer": ["swimming"]
     },
     {
         "id": "q_text_33",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They are walking around the city center."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: They are ____ around the city center.",
         "audioSrc": "/data/33.mp3",
+        "options": ["walking", "driving", "biking"],
+        "answer": ["walking"]
     },
     {
         "id": "q_text_34",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She is reading a travel blog."],
+        "prompt": "Complete: She is ____ a travel blog.",
         "audioSrc": "/data/34.mp3",
+        "answer": ["reading"]
     },
     {
         "id": "q_text_35",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I’m planning our daily activities."],
+        "prompt": "Complete: I’m ____ our daily activities.",
         "audioSrc": "/data/35.mp3",
+        "answer": ["planning"]
     },
     {
         "id": "q_text_36",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He is checking the weather before we leave."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: He is ____ the weather before we leave.",
         "audioSrc": "/data/36.mp3",
+        "options": ["checking", "checking out", "checked"],
+        "answer": ["checking"]
     },
     {
         "id": "q_text_37",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["Are they using a travel guide app?"],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: Are they ____ a travel guide app?",
         "audioSrc": "/data/37.mp3",
+        "options": ["using", "developing", "downloading"],
+        "answer": ["using"]
     },
     {
         "id": "q_text_38",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We are arriving at the airport soon."],
+        "prompt": "Complete: We are ____ at the airport soon.",
         "audioSrc": "/data/38.mp3",
+        "answer": ["arriving"]
     },
     {
         "id": "q_text_39",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She is visiting ancient ruins."],
+        "prompt": "Complete: She is ____ ancient ruins.",
         "audioSrc": "/data/39.mp3",
+        "answer": ["visiting"]
     },
     {
         "id": "q_text_40",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They are listening to music during the ride."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: They are ____ to music during the ride.",
         "audioSrc": "/data/40.mp3",
-    },
+        "options": ["listening", "hearing", "watching"],
+        "answer": ["listening"]
+    },    
     {
         "id": "q_text_41",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He is watching travel vlogs on YouTube."],
+        "prompt": "Complete: He is ____ travel vlogs on YouTube.",
         "audioSrc": "/data/41.mp3",
+        "answer": ["watching"]
     },
     {
         "id": "q_text_42",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I’m searching for cheap flights."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: I’m ____ for cheap flights.",
         "audioSrc": "/data/42.mp3",
+        "options": ["searching", "search", "searched"],
+        "answer": ["searching"]
     },
     {
         "id": "q_text_43",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["Are you using Google Maps?"],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: Are you ____ Google Maps?",
         "audioSrc": "/data/43.mp3",
+        "options": ["using", "searching", "looking at"],
+        "answer": ["using"]
     },
     {
         "id": "q_text_44",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She is buying snacks for the road trip."],
+        "prompt": "Complete: She is ____ snacks for the road trip.",
         "audioSrc": "/data/44.mp3",
+        "answer": ["buying"]
     },
     {
         "id": "q_text_45",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They are writing about their vacation in a blog."],
+        "prompt": "Complete: They are ____ about their vacation in a blog.",
         "audioSrc": "/data/45.mp3",
+        "answer": ["writing"]
     },
     {
         "id": "q_text_46",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We are taking selfies at every stop."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: We are ____ selfies at every stop.",
         "audioSrc": "/data/46.mp3",
+        "options": ["taking", "taking a", "take"],
+        "answer": ["taking"]
     },
     {
         "id": "q_text_47",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He is drinking coffee at a beach café."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: He is ____ coffee at a beach café.",
         "audioSrc": "/data/47.mp3",
+        "options": ["drinking", "ordering", "having"],
+        "answer": ["drinking"]
     },
     {
         "id": "q_text_48",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I’m enjoying a walking tour of the city."],
+        "prompt": "Complete: I’m ____ a walking tour of the city.",
         "audioSrc": "/data/48.mp3",
+        "answer": ["enjoying"]
     },
     {
         "id": "q_text_49",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She is organizing a group trip for her friends."],
+        "prompt": "Complete: She is ____ a group trip for her friends.",
         "audioSrc": "/data/49.mp3",
+        "answer": ["organizing"]
     },
     {
         "id": "q_text_50",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They are visiting famous landmarks in Rome."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: They are ____ famous landmarks in Rome.",
         "audioSrc": "/data/50.mp3",
-    },
+        "options": ["visiting", "looking at", "touring"],
+        "answer": ["visiting"]
+    },    
     {
         "id": "q_text_51",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I like classical music."],
+        "prompt": "Complete: I like ____ music.",
         "audioSrc": "/data/51.mp3",
+        "answer": ["classical"]
     },
     {
         "id": "q_text_52",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She listens to jazz every evening."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: She listens to ____ every evening.",
         "audioSrc": "/data/52.mp3",
+        "options": ["jazz", "pop", "classical"],
+        "answer": ["jazz"]
     },
     {
         "id": "q_text_53",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We enjoy pop songs on the radio."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: We enjoy ____ songs on the radio.",
         "audioSrc": "/data/53.mp3",
+        "options": ["pop", "rock", "jazz"],
+        "answer": ["pop"]
     },
     {
         "id": "q_text_54",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They prefer rock over electronic music."],
+        "prompt": "Complete: They prefer ____ over electronic music.",
         "audioSrc": "/data/54.mp3",
+        "answer": ["rock"]
     },
     {
         "id": "q_text_55",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He plays blues on his guitar."],
+        "prompt": "Complete: He plays ____ on his guitar.",
         "audioSrc": "/data/55.mp3",
+        "answer": ["blues"]
     },
     {
         "id": "q_text_56",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I don't understand heavy metal."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: I don't understand ____ metal.",
         "audioSrc": "/data/56.mp3",
+        "options": ["heavy", "light", "classic"],
+        "answer": ["heavy"]
     },
     {
         "id": "q_text_57",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["Do you like country music?"],
+        "prompt": "Complete: Do you like ____ music?",
         "audioSrc": "/data/57.mp3",
+        "answer": ["country"]
     },
     {
         "id": "q_text_58",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She always sings along with hip-hop tracks."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: She always sings along with ____ tracks.",
         "audioSrc": "/data/58.mp3",
+        "options": ["hip-hop", "pop", "classical"],
+        "answer": ["hip-hop"]
     },
     {
         "id": "q_text_59",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We attend reggae festivals in the summer."],
+        "prompt": "Complete: We attend ____ festivals in the summer.",
         "audioSrc": "/data/59.mp3",
+        "answer": ["reggae"]
     },
     {
         "id": "q_text_60",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He practices folk songs daily."],
+        "prompt": "Complete: He practices ____ songs daily.",
         "audioSrc": "/data/60.mp3",
-    },
+        "answer": ["folk"]
+    },    
     {
         "id": "q_text_61",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They play Latin music at parties."],
+        "prompt": "Complete: They play ____ music at parties.",
         "audioSrc": "/data/61.mp3",
+        "answer": ["Latin"]
     },
     {
         "id": "q_text_62",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I listen to lo-fi while studying."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: I listen to ____ while studying.",
         "audioSrc": "/data/62.mp3",
+        "options": ["lo-fi", "pop", "rock"],
+        "answer": ["lo-fi"]
     },
     {
         "id": "q_text_63",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She downloads indie songs often."],
+        "prompt": "Complete: She downloads ____ songs often.",
         "audioSrc": "/data/63.mp3",
+        "answer": ["indie"]
     },
     {
         "id": "q_text_64",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We love 80s synth-pop."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: We love ____ music.",
         "audioSrc": "/data/64.mp3",
+        "options": ["80s synth-pop", "classical", "jazz"],
+        "answer": ["80s synth-pop"]
     },
     {
         "id": "q_text_65",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He collects vinyl records of old jazz."],
+        "prompt": "Complete: He collects ____ records of old jazz.",
         "audioSrc": "/data/65.mp3",
+        "answer": ["vinyl"]
     },
     {
         "id": "q_text_66",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["Do they enjoy opera?"],
+        "type": "single-select",
+        "prompt": "Choose the correct option: Do they enjoy ____?",
         "audioSrc": "/data/66.mp3",
+        "options": ["opera", "rock", "pop"],
+        "answer": ["opera"]
     },
     {
         "id": "q_text_67",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She hates techno music."],
+        "prompt": "Complete: She hates ____ music.",
         "audioSrc": "/data/67.mp3",
+        "answer": ["techno"]
     },
     {
         "id": "q_text_68",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We stream chill-out playlists at work."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: We stream ____ playlists at work.",
         "audioSrc": "/data/68.mp3",
+        "options": ["chill-out", "rock", "pop"],
+        "answer": ["chill-out"]
     },
     {
         "id": "q_text_69",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He explores different music genres."],
+        "prompt": "Complete: He explores different ____ genres.",
         "audioSrc": "/data/69.mp3",
+        "answer": ["music"]
     },
     {
         "id": "q_text_70",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They dance to Afrobeat every weekend."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: They dance to ____ every weekend.",
         "audioSrc": "/data/70.mp3",
-    },
+        "options": ["Afrobeat", "pop", "classical"],
+        "answer": ["Afrobeat"]
+    },    
     {
         "id": "q_text_71",
         "type": "text",
