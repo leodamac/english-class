@@ -15,7 +15,7 @@ const FillInTheBlank: React.FC<Props> = ({ question, onAnswer }) => {
     const isCorrect = correctAnswers.includes(normalizedInput);
 
     onAnswer({
-      value: [input],  // Enviamos como array para que sea compatible con AnswerType
+      value: [input],
       isCorrect,
     });
     setInput("");
@@ -35,7 +35,7 @@ const FillInTheBlank: React.FC<Props> = ({ question, onAnswer }) => {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Write your answer"
       />
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit} disabled={input.trim() === ""} >Submit</button>
     </div>
   );
 };

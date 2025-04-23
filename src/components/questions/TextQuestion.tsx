@@ -37,7 +37,7 @@ const TextQuestion: React.FC<Props> = ({ question, onAnswer }) => {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Type your answer"
       />
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit} disabled={input.trim() === ""}>Submit</button>
     </div>
   );
 };

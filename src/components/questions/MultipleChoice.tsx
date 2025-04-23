@@ -49,7 +49,7 @@ const MultiSelectQuestion: React.FC<Props> = ({ question, onAnswer }) => {
           </li>
         ))}
       </ul>
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit} disabled={selected.length === 0}>Submit</button>
     </div>
   );
 };
