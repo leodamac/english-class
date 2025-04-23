@@ -34,7 +34,7 @@ const TextQuestion: React.FC<Props> = ({ question, onAnswer }) => {
       <input
         type="text"
         value={input}
-        onChange={(e) => setInput(e.target.value)}
+        onChange={(e) => setInput(e.target.value.toLowerCase())}
         placeholder="Type your answer"
       />
       <button onClick={handleSubmit} disabled={input.trim() === ""}>Submit</button>

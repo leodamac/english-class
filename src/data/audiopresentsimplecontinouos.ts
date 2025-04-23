@@ -532,137 +532,143 @@ const questions: Question[]= [
     },    
     {
         "id": "q_text_71",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I follow local rock bands."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: I follow ____ rock bands.",
         "audioSrc": "/data/71.mp3",
+        "options": ["local", "international", "famous"],
+        "answer": ["local"]
     },
     {
         "id": "q_text_72",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She creates electronic beats."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: She creates ____ beats.",
         "audioSrc": "/data/72.mp3",
+        "options": ["electronic", "acoustic", "pop"],
+        "answer": ["electronic"]
     },
     {
         "id": "q_text_73",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We play acoustic songs at gatherings."],
+        "prompt": "Complete: We play ____ songs at gatherings.",
         "audioSrc": "/data/73.mp3",
+        "answer": ["acoustic"]
     },
     {
         "id": "q_text_74",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He knows every punk band in town."],
+        "prompt": "Complete: He knows every ____ band in town.",
         "audioSrc": "/data/74.mp3",
+        "answer": ["punk"]
     },
     {
         "id": "q_text_75",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["Do you sing gospel at church?"],
+        "type": "single-select",
+        "prompt": "Choose the correct option: Do you sing ____ at church?",
         "audioSrc": "/data/75.mp3",
+        "options": ["gospel", "classical", "jazz"],
+        "answer": ["gospel"]
     },
     {
         "id": "q_text_76",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She teaches children about classical composers."],
+        "prompt": "Complete: She teaches children about ____ composers.",
         "audioSrc": "/data/76.mp3",
+        "answer": ["classical"]
     },
     {
         "id": "q_text_77",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We join online music communities."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: We join ____ music communities.",
         "audioSrc": "/data/77.mp3",
+        "options": ["online", "local", "radio"],
+        "answer": ["online"]
     },
     {
         "id": "q_text_78",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He avoids mainstream pop."],
+        "prompt": "Complete: He avoids ____ pop.",
         "audioSrc": "/data/78.mp3",
+        "answer": ["mainstream"]
     },
     {
         "id": "q_text_79",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They admire jazz musicians."],
+        "type": "single-select",
+        "prompt": "Choose the correct option: They admire ____ musicians.",
         "audioSrc": "/data/79.mp3",
+        "options": ["jazz", "rock", "hip-hop"],
+        "answer": ["jazz"]
     },
     {
         "id": "q_text_80",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I watch music documentaries."],
+        "type": "multi-select",
+        "prompt": "Choose all the correct answers: I watch ____ documentaries.",
         "audioSrc": "/data/80.mp3",
+        "options": ["music", "science", "history"],
+        "answer": ["music"]
     },
     {
         "id": "q_text_81",
         "type": "text",
         "prompt": "Write what you hear.",
         "answer": ["She reviews new albums weekly."],
-        "audioSrc": "/data/81.mp3",
+        "audioSrc": "/data/81.mp3"
     },
     {
         "id": "q_text_82",
         "type": "text",
         "prompt": "Write what you hear.",
         "answer": ["We share playlists with friends."],
-        "audioSrc": "/data/82.mp3",
+        "audioSrc": "/data/82.mp3"
     },
     {
         "id": "q_text_83",
         "type": "text",
         "prompt": "Write what you hear.",
         "answer": ["He plays in a reggae band."],
-        "audioSrc": "/data/83.mp3",
+        "audioSrc": "/data/83.mp3"
     },
     {
         "id": "q_text_84",
         "type": "text",
         "prompt": "Write what you hear.",
         "answer": ["Do they make trap beats?"],
-        "audioSrc": "/data/84.mp3",
+        "audioSrc": "/data/84.mp3"
     },
     {
         "id": "q_text_85",
         "type": "text",
         "prompt": "Write what you hear.",
         "answer": ["She learns new instruments."],
-        "audioSrc": "/data/85.mp3",
+        "audioSrc": "/data/85.mp3"
     },
     {
         "id": "q_text_86",
         "type": "text",
         "prompt": "Write what you hear.",
         "answer": ["We hear soul music at family events."],
-        "audioSrc": "/data/86.mp3",
+        "audioSrc": "/data/86.mp3"
     },
     {
         "id": "q_text_87",
         "type": "text",
         "prompt": "Write what you hear.",
         "answer": ["He writes country lyrics."],
-        "audioSrc": "/data/87.mp3",
+        "audioSrc": "/data/87.mp3"
     },
     {
         "id": "q_text_88",
         "type": "text",
         "prompt": "Write what you hear.",
         "answer": ["They record garage rock demos."],
-        "audioSrc": "/data/88.mp3",
+        "audioSrc": "/data/88.mp3"
     },
     {
         "id": "q_text_89",
         "type": "text",
         "prompt": "Write what you hear.",
         "answer": ["I appreciate instrumental music."],
-        "audioSrc": "/data/89.mp3",
-    },
+        "audioSrc": "/data/89.mp3"
+    },    
     {
         "id": "q_text_90",
         "type": "text",
