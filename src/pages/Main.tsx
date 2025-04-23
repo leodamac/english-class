@@ -5,6 +5,7 @@ import "./Main.css";
 const topics = [
   { path: "/presentsimpleinfo", label: "Present Simple" },
   { path: "/presentcontinuousinfo", label: "Present Continuous" },
+  { path: "/quizzes/AudiosPresentContinuosSimple", label: "Audio Quiz" },
 ];
 
 const MainPage: React.FC = () => {

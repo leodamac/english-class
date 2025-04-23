@@ -1,0 +1,448 @@
+/* Contenedor principal para la pregunta */
+.multi-select-question {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #f9f9fb;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Estilos para el encabezado de la pregunta */
+  .multi-select-question p {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para las instrucciones de la pregunta */
+  .multi-select-question .instructions {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Contenedor para las opciones de respuesta */
+  .multi-select-question ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .multi-select-question li {
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos para las opciones de la respuesta */
+  .multi-select-question label {
+    font-size: 1.1rem;
+    color: #444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .multi-select-question input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .multi-select-question input[type="checkbox"]:checked {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+  }
+  
+  /* Botón para reproducir el audio */
+  .multi-select-question button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .multi-select-question button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Estilo para el botón de envío */
+  .multi-select-question .submit-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #55575a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .multi-select-question .submit-button:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Estilos para el contenedor principal del QuestionRenderer */
+.question-renderer {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #f9f9fb;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  /* Mensaje para tipos de preguntas no soportados */
+  .question-renderer p {
+    font-size: 1.2rem;
+    color: #e74c3c;  /* Rojo para indicar un error */
+    font-weight: bold;
+  }
+  
+  /* Contenedor principal para la pregunta */
+.single-select-question {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #f9f9fb;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  /* Estilos para el encabezado de la pregunta */
+  .single-select-question p {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para las instrucciones de la pregunta */
+  .single-select-question .instructions {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Contenedor para las opciones de respuesta */
+  .single-select-question ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .single-select-question li {
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos para las opciones de la respuesta */
+  .single-select-question label {
+    font-size: 1.1rem;
+    color: #444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Estilos para el input radio */
+  .single-select-question input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .single-select-question input[type="radio"]:checked {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+  }
+  
+  /* Botón para reproducir el audio */
+  .single-select-question button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .single-select-question button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Estilo para el botón de envío */
+  .single-select-question .submit-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #55575a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .single-select-question .submit-button:hover {
+    background-color: #5a6268;
+  }
+  
+  .single-select-question button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  /* Contenedor principal para la pregunta de texto */
+.text-question {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #f9f9fb;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  /* Estilo para el encabezado de la pregunta */
+  .text-question p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para las instrucciones de la pregunta */
+  .text-question .instructions {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Estilo para el input de texto */
+  .text-question input[type="text"] {
+    width: 80%;
+    padding: 0.75rem 1.25rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #444;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Enfoque en el input */
+  .text-question input[type="text"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  /* Estilo para el botón de submit */
+  .text-question button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+  }
+  
+  .text-question button:hover {
+    background-color: #27ae60;
+  }
+  
+  .text-question button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Estilo para el botón de audio */
+  .text-question button:nth-of-type(1) {
+    background-color: #4a90e2;
+    margin-right: 1rem;
+  }
+  
+  .text-question button:nth-of-type(1):hover {
+    background-color: #357ab7;
+  }
+  
+  /* Mejorar el estilo de los Checkboxes y Radio Buttons */
+input[type="checkbox"], input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-right: 0.75rem;
+  }
+  
+  /* Cambiar el color del checkbox cuando está seleccionado */
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+  }
+  
+  /* Añadir un checkmark a los checkboxes */
+  input[type="checkbox"]:checked::before {
+    content: "✔";
+    position: absolute;
+    top: 0;
+    left: 3px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  /* Añadir un punto a los radio buttons */
+  input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  
+  /* Estilo de hover en checkboxes y radio buttons */
+  input[type="checkbox"]:hover,
+  input[type="radio"]:hover {
+    border-color: #2ecc71;
+  }
+  
+  /* Estilo para las listas de opciones */
+  label {
+    font-size: 1.1rem;
+    color: #333;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  /* Mejorar las tablas y eliminar los puntos negros */
+  .grammar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: none;
+  }
+  
+  .grammar-table th,
+  .grammar-table td {
+    padding: 0.8rem;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #444;
+  }
+  
+  /* Eliminar los puntos negros feos de las tablas */
+  .grammar-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  /* Mejorar la apariencia de las celdas al hacer hover */
+  .grammar-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .grammar-table td {
+    border: 1px solid #ddd;
+  }
+  
+  /* Mejora en la apariencia de los botones */
+  button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ccc;
+  }
+  
+  /* Estilos de texto en las preguntas */
+  .text-question p,
+  .single-select-question p,
+  .multi-select-question p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo general para el input de texto */
+  input[type="text"] {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #444;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Foco en el campo de texto */
+  input[type="text"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  ul {
+    list-style-type: none;  /* Elimina los puntos de las listas */
+    padding: 0;  /* Elimina el relleno por defecto de las listas */
+  }
+  
+  li {
+    padding-left: 0;  /* Asegura que no haya sangrías en las listas */
+  }

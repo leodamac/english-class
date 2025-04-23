@@ -1,8 +1,9 @@
 import Quiz from "../../components/Quiz";
-import "../../App.css";
 import { useNavigate } from "react-router-dom";
 import { Question } from "../../types";
 
+import "../../App.css";
+import "./QuizModel.css";
 
 interface QuizPageProps {
   title: string;
