@@ -2,75 +2,80 @@ import { Question } from "../types";
 
 const questions: Question[]= [
     {
-        "id": "q_text_1",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["I am spending my holidays at the beach."],
+        "id": "q1",
+        "type": "single-select",
+        "prompt": "Complete: I am ____ my holidays at the beach.",
         "audioSrc": "/data/1.mp3",
-    },
-    {
-        "id": "q_text_2",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She is visiting her grandparents this Christmas."],
+        "options": ["spending", "spent", "spend"],
+        "answer": ["spending"]
+      },
+      {
+        "id": "q2",
+        "type": "single-select",
+        "prompt": "She is ____ her grandparents this Christmas.",
         "audioSrc": "/data/2.mp3",
-    },
-    {
-        "id": "q_text_3",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We are going to the mountains this winter."],
+        "options": ["visiting", "visit", "visited"],
+        "answer": ["visiting"]
+      },
+      {
+        "id": "q3",
+        "type": "single-select",
+        "prompt": "We are going to the ____ this winter.",
         "audioSrc": "/data/3.mp3",
-    },
-    {
-        "id": "q_text_4",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["They are staying at a hotel in Cancun right now."],
+        "options": ["mountain", "mountains", "mountains'"],
+        "answer": ["mountains"]
+      },
+      {
+        "id": "q4",
+        "type": "single-select",
+        "prompt": "They are staying at a hotel in ____ right now.",
         "audioSrc": "/data/4.mp3",
-    },
-    {
-        "id": "q_text_5",
-        "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He is flying to New York for Thanksgiving."],
+        "options": ["Paris", "Cancun", "London"],
+        "answer": ["Cancun"]
+      },
+      {
+        "id": "q5",
+        "type": "single-select",
+        "prompt": "He is ____ to New York for Thanksgiving.",
         "audioSrc": "/data/5.mp3",
-    },
-    {
-        "id": "q_text_6",
+        "options": ["fly", "flying", "flown"],
+        "answer": ["flying"]
+      },
+      {
+        "id": "q6",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["My family is traveling around Europe this summer."],
+        "prompt": "Complete: My family is traveling around ______ this summer.",
         "audioSrc": "/data/6.mp3",
-    },
-    {
-        "id": "q_text_7",
+        "answer": ["Europe"]
+      },
+      {
+        "id": "q7",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["We are celebrating New Year’s Eve with fireworks tonight."],
+        "prompt": "Complete: We are celebrating New Year’s Eve with ______ tonight.",
         "audioSrc": "/data/7.mp3",
-    },
-    {
-        "id": "q_text_8",
+        "answer": ["fireworks"]
+      },
+      {
+        "id": "q8",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["He isn’t enjoying the cold weather."],
+        "prompt": "Complete: He isn’t enjoying the ______ weather.",
         "audioSrc": "/data/8.mp3",
-    },
-    {
-        "id": "q_text_9",
+        "answer": ["cold"]
+      },
+      {
+        "id": "q9",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["Are you traveling during Easter?"],
+        "prompt": "Complete the question: Are you ______ during Easter?",
         "audioSrc": "/data/9.mp3",
-    },
-    {
-        "id": "q_text_10",
+        "answer": ["traveling"]
+      },
+      {
+        "id": "q10",
         "type": "text",
-        "prompt": "Write what you hear.",
-        "answer": ["She is going camping this weekend."],
+        "prompt": "Complete: She is going ______ this weekend.",
         "audioSrc": "/data/10.mp3",
-    },
+        "answer": ["camping"]
+      },
     {
         "id": "q_text_11",
         "type": "text",
