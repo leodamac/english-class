@@ -160,3 +160,46 @@
     min-width: 300px; /* Ajusté el min-width para pantallas más pequeñas */
   }
 }
+
+.roblox-mode {
+  background-color: #23272a;
+  color: #ffffff;
+}
+
+.roblox-mode .info-container {
+  background-color: #2c3e50;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.roblox-mode .lang-toggle button {
+  background-color: #7289da;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.roblox-mode .start-quiz {
+  background-color: #7289da;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.roblox-mode .go-back {
+  background-color: #7289da;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.roblox-mode h2, .roblox-mode p, .roblox-mode td, .roblox-mode th {
+  color: #ffffff; /* Color del texto en modo Roblox para títulos, párrafos y celdas de tabla */
+}
+
+.roblox-toggle.active {
+  background-color: #7289da;
+  color: #ffffff;
+}
+
+.roblox-toggle.inactive {
+  background-color: #23272a;
+  color: #ffffff;
+}

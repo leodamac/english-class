@@ -30,9 +30,18 @@ const TenseInfo: React.FC<Props> = ({ content, quizRoute }) => {
 
   const data = content[lang];
   const tableData = data.table || [];
+  const [robloxMode, setRobloxMode] = useState(false);
+
+  const handleRobloxMode = () => {
+    setRobloxMode(!robloxMode);
+    document.body.classList.toggle('roblox-mode');
+  };
 
   return (
     <div>
+      <button onClick={handleRobloxMode} className={`roblox-toggle ${robloxMode ? "active" : ""}`}>
+        {robloxMode ? "On" : "Off"}
+      </button>
       <section className="info-container">
         <div className="lang-toggle">
           {(["en", "es", "pt"] as Lang[]).map((l) => (
